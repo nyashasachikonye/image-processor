@@ -1,0 +1,100 @@
+# README FILE:
+# Project Title: Image Processing
+# Assignment: CSC3022H C++ Assignment 4
+# Author : Kuziwa Sachikonye
+# Student Number: SCHKUZ002
+# Date: 12/05/15
+
+
+
+Note:
+Output File Location: Output\ Files/
+
+=================== RUNNING THE PROGRAM: =================== 
+
+1. Enter the native terminal.
+2. Navigate to the project directory.
+3. Clean the project by entering "make clean".
+4. Build the project by entering "make".
+5. Run the program as based on the instructions found below:
+6. The program will output the image and issue a report on the console of the
+   operation performed.
+7. To view the image created enter the following command into the terminal:
+  
+    gimp <output filename>
+
+where,
+<output filename> - this is the name of the image to be viewed. Please note
+                 that the output images are in the "Output\ Files" folder thus
+                 must be referenced correctly. i.e ("Output\ Files/output.pgm)
+<width>        - this is the width of the image in pixels found in the respective header file.
+<height>       - this is the height of the image in pixels found in the header file.
+
+8. Once completed, exit the gimp viewer.
+9. To clean the project, enter into the terminal "make clean"
+
+=============== AVAILABLE MAKEFILE COMMANDS ================
+
+make: this rule will build and compile the project
+make clean: this rule allows the user to delete all binary files.
+make test: this rule will run the 47 unit tests designed for the program.
+
+============= TERMINAL COMMAND LINE ARGUMENT NOTES ===========
+
+1. Add I1 I2 : add the pixel values of I1 to I2 (i.e. at every corresponding 2D
+position you add the two values)
+
+
+
+		-a I1 I2 (add I1 and I2)
+
+
+
+2. Subtract I1 I2 : sub tract pixel values of I2 from I1
+
+
+
+		-s I1 I2 (subtract I2 from I1)
+
+
+
+3. Invert I1 : replace each pixel value p with (255 - p) NOTE: ONE image
+only
+
+
+
+		-i I1 (invert I1)
+
+
+
+
+4. Mask I1 I2 : given I1 and an image I2, copy across values from I1 where I2
+has a value of 255. All other output values are set to 0. An example of
+'masking' is shown above.
+
+
+
+		-l I1 I2 (mask I1 with I2)
+
+
+
+5. Threshold I1 f : for all pixels in I1 > f, set the result to the integer 255,
+otherwise set the value to 0. You can build a mask using this function.
+
+
+
+		-t I1 f (threshold I1 with integer value f)
+
+
+
+NOTE:
+> This project has a "make run" option that uses the sample images in the provided folder - these should be uncommented in the project makefile under the rule make run, however using the command line as detailed above should also produce the output as the user expects.
+
+> If the program cannot read the header file supplied it will exit automatically.
+
+Argument Instructions:
+
+* The arguments must be entered in the specified order.
+* The flags must be entered in the correct order 
+  and the first flag must bear the flag indicator ('-')
+
